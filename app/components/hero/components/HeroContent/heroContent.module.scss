@@ -1,0 +1,50 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/breakpoints.scss";
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 20%;
+    color: $color-white;
+    gap: 30px;
+    @include max-sm {
+        top: 10%;
+        text-align: center;
+    }
+    .heading {
+        font-size: 80px;
+        @include max-sm {
+            font-size: 70px;
+        }
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+        gap: 20px;
+        text-align: center;
+        font-size: 25px;
+
+        .content {
+            padding: 10px;
+        }
+        .welcome {
+            background: $color-red;
+            width: 200px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid $color-white;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    }
+    .socialMedia {
+        display: flex;
+        gap: 30px;
+        padding: 15px;
+        background: $color-light-silver;
+        border-radius: 10px;
+    }
+}

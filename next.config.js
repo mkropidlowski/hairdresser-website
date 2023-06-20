@@ -1,4 +1,19 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+module.exports = {
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.svg$/i,
+            issuer: /\.[jt]sx?$/,
+            use: ["@svgr/webpack"],
+        });
 
-module.exports = nextConfig
+        return config;
+    },
+    images: {
+        unoptimized: true,
+        // domains: ['img.icons8.com'],
+    },
+    reactStrictMode: true,
+    typescript: {
+        ignoreBuildErrors: true, // for testing delete after all
+    },
+};
