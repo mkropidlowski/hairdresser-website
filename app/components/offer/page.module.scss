@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+@import "../../styles//breakpoints.scss";
+
+.wrapper {
+    min-width: 900px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .employeeContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 30px;
+        .employeeCard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+    .offer {
+        .offerItems {
+            .items {
+                list-style-type: circle;
+            }
+        }
+    }
+}

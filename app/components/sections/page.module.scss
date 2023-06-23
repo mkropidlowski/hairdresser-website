@@ -1,0 +1,81 @@
+@import "../../styles//variables.scss";
+@import "../../styles//breakpoints.scss";
+
+.container {
+    scroll-margin-top: 60px;
+    max-width: 1240px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+    margin: 0 auto;
+    color: $color-white;
+    .heading {
+        font-size: 35px;
+        text-transform: uppercase;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        @include max-md {
+            padding: 0;
+        }
+        .columnContent {
+            min-width: 500px;
+            @include max-sm {
+                text-align: center;
+                min-width: 300px;
+            }
+            .columnHeading {
+                font-size: 25px;
+            }
+            .description {
+                width: 400px;
+                text-align: left;
+                padding: 20px;
+                @include max-sm {
+                    max-width: 300px;
+                }
+            }
+            .buttonPrimary {
+                position: relative;
+                left: 50px;
+                width: 200px;
+                line-height: 15px;
+                font-weight: bold;
+                font-size: 15px;
+                border: 0;
+                border-radius: 7px;
+                padding: 15px 10px;
+                cursor: pointer;
+                @include max-sm {
+                    left: 0;
+                }
+            }
+        }
+        .imageBox {
+            width: 350px;
+            height: 400px;
+            overflow: hidden;
+            & {
+                position: relative;
+                border-radius: 15px;
+            }
+            @include max-sm {
+                margin-top: 35px;
+                width: 290px;
+            }
+        }
+    }
+    .columnFlexRow {
+        flex-direction: row;
+        @include max-md {
+            flex-direction: column;
+        }
+    }
+}

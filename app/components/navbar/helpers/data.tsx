@@ -11,6 +11,10 @@ export const navbarLinks = {
         id: "offer",
         text: "Usługi",
     },
+    gallery: {
+        id: "gallery",
+        text: "Galeria",
+    },
     price: {
         id: "price",
         text: "Cennik",
