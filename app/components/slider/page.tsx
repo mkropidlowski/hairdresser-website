@@ -1,16 +1,23 @@
 "use client";
-import React, { Component } from "react";
+import React, { FC } from "react";
 import Slider from "react-slick";
 import "./page.css";
 import sliderData from "./helpers/data";
 import Image from "next/image";
 
-const ImageSlider = () => {
+interface GalleryArrowProps {
+    currentSlide: number;
+    slideCount: number;
+    className?: string;
+    onClick?: () => void;
+}
+
+const ImageSlider: FC = () => {
     if (!Array.isArray(sliderData) || sliderData.length <= 0) {
         return null;
     }
 
-    const GalleryPrevArrow = ({ ...props }) => {
+    const GalleryPrevArrow: FC<GalleryArrowProps> = ({ currentSlide, slideCount, ...props }) => {
         const { className, onClick } = props;
 
         return (
@@ -21,7 +28,7 @@ const ImageSlider = () => {
             </div>
         );
     };
-    const GalleryNextArrow = ({ ...props }) => {
+    const GalleryNextArrow: FC<GalleryArrowProps> = ({ currentSlide, slideCount, ...props }) => {
         const { className, onClick } = props;
 
         return (
@@ -40,8 +47,8 @@ const ImageSlider = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        nextArrow: <GalleryNextArrow />,
-        prevArrow: <GalleryPrevArrow />,
+        nextArrow: <GalleryNextArrow currentSlide={0} slideCount={0} />,
+        prevArrow: <GalleryPrevArrow currentSlide={0} slideCount={0} />,
     };
     return (
         <Slider {...settings}>

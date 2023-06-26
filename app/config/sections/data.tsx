@@ -4,6 +4,7 @@ import hairdresserImage from "../../../public/images/hairdresser.jpeg";
 import Image from "next/image";
 import Offer from "@/app/components/offer/page";
 import ImageSlider from "@/app/components/slider/page";
+import PriceList from "@/app/components/priceList/page";
 
 const { about, offer, gallery, contact, price } = navbarLinks ?? {};
 export const SectionsContent: SectionProps[] = [
@@ -35,6 +36,7 @@ export const SectionsContent: SectionProps[] = [
         id: price.id,
         heading: "Cennik",
         shouldBeRow: false,
+        visualContent: <PriceList />,
     },
     {
         id: contact.id,

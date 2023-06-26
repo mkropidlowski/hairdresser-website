@@ -1,0 +1,17 @@
+.table {
+    width: 300px;
+    .tableThead {
+        .tableHeading {
+            td {
+                padding: 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+    .tableTbody {
+        tr td {
+            padding: 10px;
+        }
+    }
+}
