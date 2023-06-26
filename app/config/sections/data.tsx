@@ -5,6 +5,7 @@ import Image from "next/image";
 import Offer from "@/app/components/offer/page";
 import ImageSlider from "@/app/components/slider/page";
 import PriceList from "@/app/components/priceList/page";
+import Footer from "@/app/components/footer/page";
 
 const { about, offer, gallery, contact, price } = navbarLinks ?? {};
 export const SectionsContent: SectionProps[] = [
@@ -41,11 +42,7 @@ export const SectionsContent: SectionProps[] = [
     {
         id: contact.id,
         heading: "Kontakt",
-        columnContent: {
-            columnHeading: "Lorem lorem colum heading",
-            description:
-                "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ",
-        },
         shouldBeRow: false,
+        visualContent: <Footer />,
     },
 ];

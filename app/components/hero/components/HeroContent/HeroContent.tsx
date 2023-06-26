@@ -4,11 +4,11 @@ import { socialMediaLinks } from "@/app/config/socialmedia/data";
 import { LinksProps } from "@/app/config/socialmedia/types";
 import Link from "next/link";
 
-interface Props {
+export interface HeroProps {
     links?: LinksProps[];
 }
 
-const HeroContent: FC<Props> = ({ links = socialMediaLinks }) => (
+const HeroContent: FC<HeroProps> = ({ links = socialMediaLinks }) => (
     <div className={style.wrapper}>
         <h1 className={style.heading}>Fryzjerstwo Męskie</h1>
         <div className={style.description}>
