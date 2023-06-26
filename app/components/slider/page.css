@@ -37,6 +37,7 @@
 .slick-slide .image {
     object-fit: cover;
     border-radius: 2px;
+    min-width: 400px;
 }
 .slick-slide div div span {
     margin-top: 10px;
@@ -69,6 +70,9 @@
     .custom-prevArrow,
     .custom-nextArrow {
         display: none !important;
+    }
+    .image-box > img {
+        height: 400px !important;
     }
 }
 .slick-slide:not(.slick-active) {
