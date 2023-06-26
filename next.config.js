@@ -10,7 +10,7 @@ module.exports = {
     },
     images: {
         unoptimized: true,
-        // domains: ['img.icons8.com'],
+        domains: ["images.unsplash.com"],
     },
     reactStrictMode: true,
     typescript: {

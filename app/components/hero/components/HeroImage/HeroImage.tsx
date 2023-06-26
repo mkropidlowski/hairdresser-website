@@ -4,7 +4,7 @@ import Image from "next/image";
 const HeroImage = () => (
     <>
         <div>
-            <Image src={heroBackground} alt="background" fill={true} priority={true} style={{ objectFit: "cover" }} />
+            <Image src={heroBackground} alt="background" fill priority style={{ objectFit: "cover" }} />
         </div>
     </>
 );

@@ -1,7 +1,8 @@
 import { FC } from "react";
 import style from "./page.module.scss";
-import { EmployeeProps, employeeIcons, OfferListProps, offerList } from "@/app/config/offer/data";
+import { EmployeeProps, employeeIcons, OfferListProps, offerList, offerTitle } from "@/app/config/offer/data";
 import { useId } from "react";
+import { Scissors } from "../icons";
 
 interface OfferProps {
     employee?: EmployeeProps[];
@@ -12,7 +13,6 @@ const Offer: FC<OfferProps> = ({ employee = employeeIcons, offerItems = offerLis
     const Id = useId();
     return (
         <div className={style.wrapper}>
-            <h2>Nasi pracownicy</h2>
             <div className={style.employeeContainer}>
                 {Object.values(employee).map(({ name, icon, description }) => (
                     <div key={`${name}${Id}`} className={style.employeeCard}>
@@ -25,11 +25,14 @@ const Offer: FC<OfferProps> = ({ employee = employeeIcons, offerItems = offerLis
                 ))}
             </div>
             <div className={style.offer}>
-                <h2>Jako profesjonalny zakład fryzjerski oferujemy usługi takie jak:</h2>
+                <h2>{offerTitle}</h2>
                 <ul className={style.offerItems}>
-                    {Object.values(offerItems).map(({ serviceName }) => (
-                        <li key={Id} className={style.items}>
-                            {serviceName}
+                    {Object.values(offerItems).map(({ id, serviceName }) => (
+                        <li key={id} className={style.items}>
+                            <span className={style.icon}>
+                                <Scissors width={25} height={25} />
+                            </span>
+                            <span>{serviceName}</span>
                         </li>
                     ))}
                 </ul>

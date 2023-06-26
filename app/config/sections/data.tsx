@@ -3,6 +3,7 @@ import { navbarLinks } from "@/app/components/navbar/helpers/data";
 import hairdresserImage from "../../../public/images/hairdresser.jpeg";
 import Image from "next/image";
 import Offer from "@/app/components/offer/page";
+import ImageSlider from "@/app/components/slider/page";
 
 const { about, offer, gallery, contact, price } = navbarLinks ?? {};
 export const SectionsContent: SectionProps[] = [
@@ -20,7 +21,7 @@ export const SectionsContent: SectionProps[] = [
     },
     {
         id: offer.id,
-        heading: "Nasza oferta",
+        heading: "Nasz zespół",
         shouldBeRow: false,
         visualContent: <Offer />,
     },
@@ -28,6 +29,7 @@ export const SectionsContent: SectionProps[] = [
         id: gallery.id,
         heading: "Galeria prac",
         shouldBeRow: false,
+        visualContent: <ImageSlider />,
     },
     {
         id: price.id,
